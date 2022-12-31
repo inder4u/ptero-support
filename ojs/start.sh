@@ -3,7 +3,7 @@
 echo "⟳ Starting PHP-FPM..."
 /usr/sbin/php-fpm7 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
 cd /home/container/webroot/ojs
-if [ ! -f "/home/container/webroot/ojs/lib/pkp/composer.json" ];
+if [ ! -f "/home/container/webroot/ojs/lib/pkp/composer.lock" ];
 then 
 composer update -d lib/pkp --no-dev
 composer install -d plugins/paymethod/paypal --no-dev
